@@ -883,6 +883,235 @@
   }
   .about-cta-text em { font-style: italic; color: var(--rose); }
 
+
+  /* ══════════════════════════
+     CONTACT SECTION
+  ══════════════════════════ */
+  #contact {
+    background: var(--white);
+    padding: 88px 48px;
+  }
+  .contact-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .contact-left h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+  .contact-left h3 em { font-style: italic; color: var(--plum); }
+  .contact-left p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 28px;
+  }
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .contact-icon {
+    width: 42px; height: 42px;
+    background: var(--blush);
+    border: 1.5px solid var(--plum-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .contact-detail-text {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+  .contact-detail-text a {
+    color: var(--plum);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .contact-detail-text a:hover { text-decoration: underline; }
+  .contact-detail-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 2px;
+  }
+
+  .contact-right {
+    background: var(--cream);
+    border: 1.5px solid var(--plum-light);
+    border-radius: 8px;
+    padding: 36px 32px;
+  }
+  .contact-right h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+  }
+  .contact-right p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin-bottom: 24px;
+  }
+  .calendly-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--plum);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-bottom: 28px;
+    display: block;
+    text-align: center;
+  }
+  .calendly-btn:hover {
+    background: var(--rose);
+    color: var(--plum-dark);
+    transform: translateY(-2px);
+  }
+  .contact-form-placeholder {
+    background: var(--white);
+    border: 2px dashed var(--plum-light);
+    border-radius: 6px;
+    padding: 24px;
+    text-align: center;
+  }
+  .contact-form-placeholder p {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    margin: 0;
+    font-style: italic;
+  }
+  .social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .social-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blush);
+    border: 1.5px solid var(--plum-light);
+    border-radius: 4px;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: var(--plum);
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .social-link:hover {
+    background: var(--plum);
+    color: white;
+    border-color: var(--plum);
+  }
+
+  /* ══════════════════════════
+     PRIVACY SECTION
+  ══════════════════════════ */
+  #privacy {
+    background: var(--blush);
+    padding: 88px 48px;
+    border-top: 3px solid var(--plum-light);
+  }
+  .privacy-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  #privacy h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+  .privacy-intro {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 40px;
+  }
+  .privacy-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .privacy-item {
+    background: var(--white);
+    border: 1.5px solid var(--plum-light);
+    border-bottom: none;
+    padding: 24px 28px;
+  }
+  .privacy-item:first-child { border-radius: 8px 8px 0 0; }
+  .privacy-item:last-child { border-bottom: 1.5px solid var(--plum-light); border-radius: 0 0 8px 8px; }
+  .privacy-item h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--plum);
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+  .privacy-item p {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+  }
+  .privacy-contact {
+    background: var(--plum);
+    border-radius: 6px;
+    padding: 20px 28px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .privacy-contact p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+    margin: 0;
+  }
+  .privacy-contact a {
+    color: var(--rose);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    #contact, #privacy { padding-left: 24px; padding-right: 24px; }
+  }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -913,6 +1142,7 @@
     <li><a href="#about">About</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#packages">Packages</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#cta" class="nav-cta">Book a Call</a></li>
   </ul>
 </nav>
@@ -1245,6 +1475,101 @@
   </div>
 </section>
 
+
+<!-- ════ CONTACT ════ -->
+<section id="contact">
+  <div class="contact-inner">
+    <span class="section-chip">Get In Touch</span>
+    <h2 style="font-family:'Playfair Display',serif; font-size:clamp(2rem,4.5vw,3.2rem); font-weight:900; line-height:1.15; color:var(--text-dark); margin-bottom:16px;">Let's talk about<br>your <em style="font-style:italic; color:var(--plum);">books.</em></h2>
+    <p style="font-size:1.05rem; line-height:1.85; color:var(--text-mid); max-width:560px;">Whether you're ready to get started or just want to ask a question — reach out. No obligation, no pressure, just a straightforward conversation about what you need.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-left">
+        <h3>We'd love to <em>hear from you.</em></h3>
+        <p>The best way to get in touch is by email. You can also book a free 15-minute consultation directly into our calendar — no back and forth required.</p>
+
+        <div class="contact-detail">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-detail-label">Email</div>
+            <div class="contact-detail-text"><a href="mailto:teresa@countthebeans.com.au">teresa@countthebeans.com.au</a></div>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-detail-label">Based In</div>
+            <div class="contact-detail-text">Perth, Western Australia<br>Serving clients across Perth</div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" class="social-link">📘 Facebook</a>
+          <a href="#" class="social-link">💼 LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <h3>Book a free 15-min call</h3>
+        <p>Not sure if we're the right fit? Book a free 15-minute consultation. We'll have a quick chat about your business, your books, and what you need — completely obligation free.</p>
+        <a href="https://calendly.com/teresa-countthebeans/15min" target="_blank" class="calendly-btn">📅 Book a Free Consultation →</a>
+
+        <div class="contact-form-placeholder">
+          <p>📋 Contact form coming soon — in the meantime, reach us by email or book a call above.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════ PRIVACY ════ -->
+<section id="privacy">
+  <div class="privacy-inner">
+    <span class="section-chip">Privacy Policy</span>
+    <h2>How we handle<br>your information.</h2>
+    <p class="privacy-intro">Count The Beans is committed to protecting your privacy in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). Here's a plain-English summary of our key commitments. The full policy is available on request.</p>
+
+    <div class="privacy-sections">
+      <div class="privacy-item">
+        <h3>What we collect</h3>
+        <p>We collect only what's necessary to provide our services — contact details, financial and tax information, payroll records, and business information relevant to bookkeeping and compliance.</p>
+      </div>
+      <div class="privacy-item">
+        <h3>Why we collect it</h3>
+        <p>To provide bookkeeping, payroll, and BAS/IAS services, communicate with you about your engagement, meet our legal and regulatory obligations, and issue invoices for our services.</p>
+      </div>
+      <div class="privacy-item">
+        <h3>Who we share it with</h3>
+        <p>We do not sell, rent, or trade your information. We may share with the ATO (for lodgements), software providers such as Xero, and professional advisers where required by law or your engagement.</p>
+      </div>
+      <div class="privacy-item">
+        <h3>AI tools</h3>
+        <p>We use AI tools for drafting, research, and administrative tasks only. No raw client financial data, TFNs, or sensitive personal information is entered into third-party AI platforms. AI tools are never used to lodge returns or make compliance decisions without human review.</p>
+      </div>
+      <div class="privacy-item">
+        <h3>Overseas contractors</h3>
+        <p>We may engage qualified overseas contractors for bookkeeping and administrative support. All contractors are bound by strict confidentiality agreements. No TFNs, passwords, or sensitive identification information is shared. All work is reviewed and approved by Count The Beans before delivery to you.</p>
+      </div>
+      <div class="privacy-item">
+        <h3>Data security & retention</h3>
+        <p>Your data is stored securely using encrypted, reputable cloud platforms. We retain records for a minimum of 5 years as required by law, and securely destroy information when it is no longer needed.</p>
+      </div>
+      <div class="privacy-item">
+        <h3>Your rights</h3>
+        <p>You have the right to access the personal information we hold about you and to request corrections. Contact us at teresa@countthebeans.com.au with the subject line "Privacy Access Request".</p>
+      </div>
+    </div>
+
+    <div class="privacy-contact">
+      <p>Privacy enquiries or complaints: <a href="mailto:teresa@countthebeans.com.au">teresa@countthebeans.com.au</a> — subject line "Privacy Complaint". Unresolved complaints may be referred to the <a href="https://www.oaic.gov.au" target="_blank">OAIC</a>.</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- ════ CLOSING CTA ════ -->
 <section id="cta">
   <div class="cta-inner">
@@ -1268,8 +1593,8 @@
     <li><a href="#about">About</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#packages">Packages</a></li>
-    <li><a href="mailto:teresa@countthebeans.com.au">Contact</a></li>
-    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#privacy">Privacy Policy</a></li>
   </ul>
   <span class="footer-copy">© 2026 Count The Beans · Perth, WA · ABN 41 570 937 112</span>
 </footer>
