@@ -729,6 +729,160 @@
   /* ══════════════════════════
      ANIMATIONS
   ══════════════════════════ */
+
+  /* ══════════════════════════
+     ABOUT SECTION
+  ══════════════════════════ */
+  #about {
+    background: var(--white);
+    padding: 88px 48px;
+  }
+  .about-inner { max-width: 900px; margin: 0 auto; }
+
+  .about-hero-band {
+    background: var(--plum);
+    border-radius: 8px;
+    padding: 48px 44px;
+    margin-bottom: 3px;
+    position: relative;
+    overflow: hidden;
+  }
+  .about-hero-band::after {
+    content: '';
+    position: absolute;
+    right: -30px; top: -30px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    background: rgba(232,160,200,0.08);
+    pointer-events: none;
+  }
+  .about-hero-band h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .about-hero-band h2 em { font-style: italic; color: var(--rose); }
+  .about-hero-band p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+    max-width: 560px;
+    font-weight: 300;
+  }
+
+  .about-cream-band {
+    background: var(--cream);
+    border: 1.5px solid var(--plum-light);
+    border-radius: 8px;
+    padding: 40px 44px;
+    margin-bottom: 3px;
+  }
+  .about-cream-band h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+  .about-cream-band h3 em { font-style: italic; color: var(--plum); }
+  .about-cream-band p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text-mid);
+    margin-bottom: 14px;
+  }
+  .about-cream-band p:last-child { margin-bottom: 0; }
+  .about-cream-band strong { color: var(--text-dark); font-weight: 600; }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    margin-bottom: 3px;
+  }
+  .about-stat {
+    background: var(--plum-dark);
+    padding: 28px 20px;
+    text-align: center;
+  }
+  .about-stat:first-child { border-radius: 8px 0 0 8px; }
+  .about-stat:last-child  { border-radius: 0 8px 8px 0; }
+  .about-stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--rose);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .about-stat-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .about-values {
+    background: var(--blush);
+    border: 1.5px solid var(--plum-light);
+    border-radius: 8px;
+    padding: 40px 44px;
+    margin-bottom: 3px;
+  }
+  .about-values h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+  }
+  .about-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .about-value-item {
+    background: var(--white);
+    border: 1.5px solid var(--plum-light);
+    border-left: 4px solid var(--plum);
+    border-radius: 0 6px 6px 0;
+    padding: 18px 16px;
+  }
+  .about-value-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+  }
+  .about-value-desc {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  .about-cta-band {
+    background: var(--plum);
+    border-radius: 8px;
+    padding: 36px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .about-cta-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.3;
+  }
+  .about-cta-text em { font-style: italic; color: var(--rose); }
+
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -756,6 +910,7 @@
     <span class="wordmark-main">beans <span class="bean-accent"></span></span>
   </div>
   <ul class="nav-links">
+    <li><a href="#about">About</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#packages">Packages</a></li>
     <li><a href="#cta" class="nav-cta">Book a Call</a></li>
@@ -791,6 +946,75 @@
       You're not bad with money. You're just running a business and doing literally
       everything else at the same time. <strong>That's not sustainable — and it doesn't have to be your reality.</strong>
     </p>
+  </div>
+</section>
+
+
+<!-- ════ ABOUT ════ -->
+<section id="about">
+  <div class="about-inner">
+    <span class="section-chip">About Count The Beans</span>
+
+    <div class="about-hero-band">
+      <h2>Bookkeeping that actually <em>makes sense</em> —<br>and a bookkeeper who gives a damn.</h2>
+      <p>Count The Beans was built for business owners who are brilliant at what they do — and exhausted by their finances. You deserve better than confusing, corporate, and overpriced. Here's something different.</p>
+    </div>
+
+    <div class="about-stats">
+      <div class="about-stat">
+        <div class="about-stat-number">10+</div>
+        <div class="about-stat-label">Years experience</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-number">5+</div>
+        <div class="about-stat-label">Industries served</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-number">ICB</div>
+        <div class="about-stat-label">Certified member</div>
+      </div>
+    </div>
+
+    <div class="about-cream-band">
+      <h3>More than a decade of <em>real-world</em> bookkeeping.</h3>
+      <p>Count The Beans is the business Teresa spent over a decade building the expertise to create. With a background spanning accounting firms, bookkeeping practices, and more than ten years of hands-on experience across construction and trades, retail and hospitality, health and wellness, and professional services — Teresa has seen every variation of a messy set of books. And fixed them.</p>
+      <p>That breadth of experience matters. It means Count The Beans doesn't apply a one-size-fits-all approach. It means your books are handled by someone who <strong>actually understands your industry</strong> — not just the software.</p>
+    </div>
+
+    <div class="about-cream-band">
+      <h3>Why Count The Beans exists.</h3>
+      <p>After years of watching clients get overcharged, under-informed, and left to figure out their finances alone — Teresa decided to do it differently. Count The Beans was founded on a straightforward idea: <strong>small business owners deserve a bookkeeper who tells them the truth, charges them fairly, and actually explains what's going on.</strong></p>
+      <p>No hidden fees. No jargon designed to make you feel confused. No being passed around between staff. Just one experienced bookkeeper, completely across your file, every single month.</p>
+      <p>Count The Beans is based in Perth, Western Australia and works with sole traders and small businesses across the city — because great bookkeeping shouldn't only be available to big businesses with big budgets.</p>
+    </div>
+
+    <div class="about-values">
+      <h3>What you can expect</h3>
+      <div class="about-values-grid">
+        <div class="about-value-item">
+          <div class="about-value-title">Transparent pricing</div>
+          <div class="about-value-desc">You'll know exactly what you're paying before you sign anything. No surprises.</div>
+        </div>
+        <div class="about-value-item">
+          <div class="about-value-title">Plain-English explanations</div>
+          <div class="about-value-desc">Your numbers explained in language that actually makes sense to you.</div>
+        </div>
+        <div class="about-value-item">
+          <div class="about-value-title">Registered BAS Agent</div>
+          <div class="about-value-desc">Fully qualified and registered — your compliance is in safe, experienced hands.</div>
+        </div>
+        <div class="about-value-item">
+          <div class="about-value-title">ICB certified</div>
+          <div class="about-value-desc">Member of the Institute of Certified Bookkeepers. Professional standards, always.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-cta-band">
+      <div class="about-cta-text">Ready to hand over the books<br>and <em>get back to your business?</em></div>
+      <a href="mailto:teresa@countthebeans.com.au" class="btn-primary">Book a Free Call →</a>
+    </div>
+
   </div>
 </section>
 
@@ -962,6 +1186,8 @@
     <span class="bean-sm"></span> count the beans
   </div>
   <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#why">Why Us</a></li>
     <li><a href="#packages">Packages</a></li>
     <li><a href="mailto:teresa@countthebeans.com.au">Contact</a></li>
