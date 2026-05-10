@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Count The Beans</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --plum: #644173;
+    --dark: #2d1b36;
+    --rose: #e8a0c8;
+    --cream: #fdf5f9;
+    --light: #f0e6f5;
+    --mid: #7a5a6a;
+    --border: #e8d0f0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', Arial, sans-serif; background: var(--cream); color: #1a1a1a; }
+
+  /* NAV */
+  nav {
+    background: var(--dark);
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo .top { font-size: 10px; font-weight: 300; color: var(--rose); letter-spacing: 2px; }
+  .nav-logo .main { font-size: 18px; font-weight: 900; color: white; letter-spacing: -0.5px; }
+  .nav-logo .main span { color: var(--rose); font-size: 11px; }
+  nav a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; }
+  nav a:hover { color: var(--rose); }
+
+  /* HERO */
+  .hero {
+    background: var(--plum);
+    padding: 60px 48px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    right: -40px; top: -40px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(232,160,200,0.08);
+    pointer-events: none;
+  }
+  .hero .eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--rose);
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hero .eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--rose); }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700; color: white; line-height: 1.15;
+    margin-bottom: 12px;
+  }
+  .hero .meta { font-size: 0.88rem; color: rgba(255,255,255,0.45); }
+
+  /* CONTENT */
+  .content-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 56px 48px 80px;
+  }
+
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section h2 .num {
+    background: var(--plum);
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .section h3 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--plum);
+    margin: 20px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .section p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  .section ul {
+    margin: 8px 0 12px 0;
+    padding: 0;
+    list-style: none;
+  }
+  .section ul li {
+    font-size: 0.93rem;
+    line-height: 1.75;
+    color: #444;
+    padding: 4px 0 4px 20px;
+    position: relative;
+  }
+  .section ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--rose);
+    font-weight: 700;
+  }
+
+  .note-box {
+    background: var(--light);
+    border-left: 4px solid var(--plum);
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: #555;
+  }
+  .note-box strong { color: var(--dark); }
+
+  .contact-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 0.9rem;
+  }
+  .contact-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .contact-table td:first-child {
+    font-weight: 600;
+    color: var(--dark);
+    width: 200px;
+    background: var(--light);
+  }
+  .contact-table td:last-child { color: #444; }
+  .contact-table tr:last-child td { border-bottom: none; }
+  .contact-table a { color: var(--plum); text-decoration: none; }
+  .contact-table a:hover { text-decoration: underline; }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    padding: 32px 48px;
+    text-align: center;
+  }
+  footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); line-height: 1.7; }
+  footer a { color: var(--rose); text-decoration: none; }
+
+  @media (max-width: 640px) {
+    nav, .hero, .content-wrap, footer { padding-left: 24px; padding-right: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="top">count the</div>
+    <div class="main">beans <span>●</span></div>
+  </div>
+  <a href="https://countthebeans.com.au">← Back to website</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Count The Beans &nbsp;·&nbsp; Last updated: May 2026</p>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <!-- 1 -->
+  <div class="section">
+    <h2><span class="num">1</span> About This Policy</h2>
+    <p>Count The Beans is a bookkeeping and BAS agency practice operated by Teresa (ABN 41 570 937 112) as a sole trader based in Perth, Western Australia.</p>
+    <p>This Privacy Policy explains how Count The Beans collects, uses, stores, discloses, and protects personal information in the course of providing bookkeeping and BAS agent services to clients.</p>
+    <p>Count The Beans is committed to complying with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs). As a registered BAS Agent, Count The Beans is also bound by the confidentiality obligations in the Tax Agent Services Act 2009 (TASA) and the Code of Professional Conduct.</p>
+    <p>By engaging Count The Beans or visiting countthebeans.com.au, you consent to the practices described in this Policy.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <h2><span class="num">2</span> What Personal Information We Collect</h2>
+    <p>We collect only the information necessary to provide our services and meet our legal obligations.</p>
+    <h3>Contact and identity information</h3>
+    <ul>
+      <li>Full name and trading name</li>
+      <li>Business address and postal address</li>
+      <li>Email address and phone number</li>
+      <li>ABN, ACN, or other business registration details</li>
+    </ul>
+    <h3>Financial and tax information</h3>
+    <ul>
+      <li>Bank account details (for reconciliation purposes only)</li>
+      <li>BAS and IAS data, GST records, and PAYG withholding information</li>
+      <li>Payroll records including employee details, wages, superannuation, and leave balances</li>
+      <li>Financial statements, invoices, receipts, and transaction records</li>
+      <li>Tax file numbers (TFNs) where required and authorised by law</li>
+    </ul>
+    <h3>Business information</h3>
+    <ul>
+      <li>Information about your business operations relevant to bookkeeping and compliance</li>
+      <li>Login credentials for accounting software such as Xero (stored and used securely)</li>
+    </ul>
+    <h3>Website information</h3>
+    <ul>
+      <li>General browsing data collected via cookies or analytics tools on countthebeans.com.au</li>
+      <li>Information submitted through contact forms or enquiry emails</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <h2><span class="num">3</span> How We Collect Personal Information</h2>
+    <p>We collect personal information directly from you in the course of our engagement, including:</p>
+    <ul>
+      <li>During initial consultations and onboarding</li>
+      <li>Via email, phone, or our website contact form</li>
+      <li>Through accounting software such as Xero, which you grant us access to</li>
+      <li>From documents and records you provide to us</li>
+      <li>From the ATO or other government bodies, where you have authorised us to act on your behalf</li>
+    </ul>
+    <p>We do not collect personal information by unlawful or unfair means.</p>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <h2><span class="num">4</span> Why We Collect and Use Personal Information</h2>
+    <ul>
+      <li>Providing bookkeeping, payroll, and BAS/IAS lodgement services</li>
+      <li>Communicating with you about your engagement</li>
+      <li>Complying with our obligations as a registered BAS Agent under TASA</li>
+      <li>Liaising with the ATO and other relevant authorities on your behalf</li>
+      <li>Issuing invoices and managing payment for our services</li>
+      <li>Meeting our legal, regulatory, and professional obligations</li>
+    </ul>
+    <p>We will not use your personal information for any purpose unrelated to your engagement without your consent.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <h2><span class="num">5</span> Disclosure of Personal Information</h2>
+    <p>Count The Beans does not sell, rent, or trade your personal information. We may disclose your information only in the following circumstances:</p>
+    <h3>To the ATO and government bodies</h3>
+    <ul>
+      <li>For the preparation and lodgement of BAS, IAS, and other returns</li>
+      <li>Where required by law, regulation, or court order</li>
+    </ul>
+    <h3>To our software providers</h3>
+    <ul>
+      <li>Xero — used for data storage and reconciliation. Xero's Privacy Policy applies to data held on their platform</li>
+      <li>Other cloud-based tools used in delivering our services</li>
+    </ul>
+    <h3>To professional advisers</h3>
+    <ul>
+      <li>Accountants, lawyers, or the Tax Practitioners Board (TPB) where required for compliance purposes</li>
+    </ul>
+    <h3>Artificial Intelligence (AI) Tools</h3>
+    <div class="note-box">
+      <strong>How we use AI:</strong> Count The Beans uses AI-assisted tools for drafting documents, internal research, and administrative tasks only. AI tools are never used to lodge returns or make compliance decisions without human review. No raw client financial data, TFNs, or sensitive personal identification information is entered into third-party AI platforms. Any information used with AI tools is generalised or de-identified where possible.
+    </div>
+    <h3>Overseas Contractors</h3>
+    <div class="note-box">
+      <strong>Our commitment:</strong> Count The Beans may engage qualified overseas contractors for bookkeeping and virtual assistant tasks. All contractors are bound by written agreements containing strict confidentiality and data security obligations. No client TFNs, passwords, or sensitive identification information is shared with overseas contractors. All work is reviewed and approved by Count The Beans before delivery to you. This is conducted in accordance with Australian Privacy Principle 8 (APP 8).
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <h2><span class="num">6</span> Data Storage and Security</h2>
+    <p>We take reasonable steps to protect your personal information from misuse, interference, loss, and unauthorised access. Our measures include:</p>
+    <ul>
+      <li>Reputable, encrypted cloud-based platforms for data storage (including Xero)</li>
+      <li>Password protection and two-factor authentication where available</li>
+      <li>Restricted access to client data — only those who need it to perform their duties</li>
+      <li>Secure communication channels for sharing sensitive information</li>
+      <li>Regular review of security practices</li>
+    </ul>
+    <p>While we take reasonable precautions, no method of data transmission or storage is completely secure. If you become aware of any security breach, please notify us immediately at <a href="mailto:teresa@countthebeans.com.au" style="color:var(--plum);">teresa@countthebeans.com.au</a>.</p>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <h2><span class="num">7</span> Retention and Disposal</h2>
+    <p>We retain personal information for as long as needed to provide our services and comply with our legal obligations. As a registered BAS Agent, we are required by law to retain certain records for a minimum of 5 years.</p>
+    <p>When personal information is no longer required, we will take reasonable steps to securely destroy or de-identify it.</p>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <h2><span class="num">8</span> Your Right to Access and Correct Your Information</h2>
+    <p>You have the right to request access to the personal information we hold about you and to ask us to correct any inaccurate, incomplete, or out-of-date information.</p>
+    <p>To make a request, contact us at <a href="mailto:teresa@countthebeans.com.au" style="color:var(--plum);">teresa@countthebeans.com.au</a> with the subject line <strong>"Privacy Access Request"</strong> or <strong>"Privacy Correction Request"</strong>. We will respond within 30 days.</p>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <h2><span class="num">9</span> Privacy Complaints</h2>
+    <p>If you believe we have handled your personal information incorrectly, please contact us first so we can attempt to resolve the matter directly.</p>
+    <p>Email <a href="mailto:teresa@countthebeans.com.au" style="color:var(--plum);">teresa@countthebeans.com.au</a> with the subject line <strong>"Privacy Complaint"</strong>. We will acknowledge your complaint within 5 business days and aim to resolve it within 30 days.</p>
+    <p>If you are not satisfied with our response, you may contact the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" style="color:var(--plum);">oaic.gov.au</a> or by calling 1300 363 992.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <h2><span class="num">10</span> Our Website</h2>
+    <p>Our website at countthebeans.com.au may collect non-personal information through cookies and analytics tools to help us understand how visitors use the site. This data is aggregated and does not identify individuals.</p>
+    <p>Information submitted through our contact form will be used solely to respond to your enquiry. It will not be added to marketing lists or shared with third parties without your consent.</p>
+    <p>You can disable cookies through your browser settings, though this may affect your experience on the site.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <h2><span class="num">11</span> Changes to This Policy</h2>
+    <p>Count The Beans may update this Privacy Policy from time to time. The current version will always be available at countthebeans.com.au and upon request. The date at the top of this document indicates when the Policy was last updated.</p>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <h2><span class="num">12</span> Contact Us</h2>
+    <table class="contact-table">
+      <tr><td>Business name</td><td>Count The Beans</td></tr>
+      <tr><td>ABN</td><td>41 570 937 112</td></tr>
+      <tr><td>Email</td><td><a href="mailto:teresa@countthebeans.com.au">teresa@countthebeans.com.au</a></td></tr>
+      <tr><td>Website</td><td><a href="https://countthebeans.com.au">countthebeans.com.au</a></td></tr>
+      <tr><td>Location</td><td>Perth, Western Australia</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>🫘 Count The Beans &nbsp;·&nbsp; ABN 41 570 937 112 &nbsp;·&nbsp; <a href="mailto:teresa@countthebeans.com.au">teresa@countthebeans.com.au</a> &nbsp;·&nbsp; <a href="https://countthebeans.com.au">countthebeans.com.au</a></p>
+  <p style="margin-top:8px;">Perth, Western Australia &nbsp;·&nbsp; Privacy Policy last updated May 2026</p>
+</footer>
+
+</body>
+</html>
